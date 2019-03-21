@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: #EAE8E8;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+header .brand {
+    height: 30px;
+    width: 30px;
+    background-color: #000;
+    position: absolute;
+    top: 25%;
+    left: 47%;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #EAE8E8;
+}
+a {
+    color: #000;
+}
+
+header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+header li a:hover,
+header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+  
+header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+  
+  
+header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+  
+header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+header .menu-icon .navicon:before,
+header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+header .menu-icon .navicon:after {
+    top: -5px;
+}
+  
+header .menu-btn {
+    display: none;
+}
+
+header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+  
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFD9D9;
+    color: #707070;
+    height: 70vh;
+}
+
+.welcome h1 {
+    margin-top: 150px;
+    font-size: 35pt;
+}
+
+.welcome span {
+    font-size: 12pt;
+    margin-bottom: 80px;
+}
+
+.welcome button {
+    width: 200px;
+    padding: 15px;
+    background: #8E93FF;
+    color: #fff;
+    font-size: 15pt
+}
+
+.skills-content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.skills-content::after {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: black;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.skill .skill-img {
+    height: 100px;
+    width: 100px;
+    background: #FFFB93;
+    margin-bottom: 30px;
+    border: 1px solid #707070;
+}
+
+.skill span {
+    color: #4E4E4E;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    color: #888585;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articles h2 {
+    font-size: 25pt;
+    color: #4E4E4E;
+    padding: 20px 30px 30px 30px;
+    position: relative;
+}
+
+.article h2::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background: black;
+}
+
+.articles p {
+    font-size: 11pt;
+    font-weight: bold;
+    color: #4E4E4E;
+    padding: 10px 40px 40px 40px;
+    text-align: center;
+}
+
+.articles .article-img {
+    height: 25vh;
+    width: 75%;
+    background: #DFFF98;
+    border: 1px solid #707070;
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    height: 80px;
+    border-top: 1px solid black;
+    background: #EAE8E8;
+}

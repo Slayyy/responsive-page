@@ -1,0 +1,80 @@
+@media screen and (max-width: 375px) {
+    
+    .articles .article-img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 992px) {
+    
+    header .brand {
+        left: 50%;
+    }
+
+    .welcome {
+        height: 65vh;
+    }
+
+    .skills-content {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .skill {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+    header .brand {
+        left: 20px;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li a {
+    padding: 20px 30px;
+    }
+
+    header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+    }
+
+    header .menu-icon {
+    display: none;
+    }
+
+    .skills-content {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .articles {
+        flex-direction: row;
+        padding: 100px;
+    }
+
+    .articles .article-img {
+        flex: 50%;
+        height: 50vh;
+    }
+
+    .article {
+        flex: 50%;
+    }
+
+    .article h2 {
+        align-self: flex-start;
+    }
+    .article  p {
+        text-align: initial;
+        font-size: 14pt;
+    }
+}
+
